@@ -1,9 +1,10 @@
-collection = ['ruby', 'javascript', 'python', 'objective-c']
-
-my_collect(empty_array) do |x|
-empty_array = []
-    counter +=1
-      end
-      counter
-
+def my_collect(collection)
+  i=0
+  new_collection=[]
+  while i<collection.length
+      new_collection << yield(collection[i])
+      i+=1
+  end
+ new_collection
+end
 
